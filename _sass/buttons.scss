@@ -1,0 +1,28 @@
+@import "colors";
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 0.2em;
+  padding: 0.2em 1em;
+  min-width: 1.5em;
+  text-align: center;
+  border-radius: 0.5em;
+
+  background: $primary;
+  color: $primary-invert;
+  border: 1px solid $primary;
+  
+  transition-property: background-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    background: $primary-invert;
+    color: $primary;
+  }
+  
+  &.button-icon {
+    padding: 0.2em;
+  }
+}

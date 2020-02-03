@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+
+<nav>
+<a class="button"
+    href="https://raw.githubusercontent.com/asparlose/mv-plugins/{{ page.branch | default: 'master' }}/{{ page.file }}"
+    title="ダウンロード"
+    download="{{ page.file }}">
+  ダウンロード
+  <i class="fas fa-file-download"></i>
+</a>
+<a class="button button-icon"
+    href="https://github.com/asparlose/mv-plugins/blob/{{ page.branch | default: 'master' }}/{{ page.file }}"
+    title="GitHub">
+  <i class="fab fa-github"></i>
+</a>
+</nav>
+
+{{ content }}

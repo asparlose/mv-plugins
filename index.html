@@ -1,0 +1,18 @@
+---
+layout: page
+---
+
+<ul>
+  {%- for p in site.x %}
+  <li>
+    <a href="{{ p.url }}">{{ p.title }}</a>
+    <p>
+      {%- if p.description -%}
+        {{ p.description | escape }}
+      {%- else -%}
+        {{ p.excerpt | strip_html | truncate: 200 }}
+      {%- endif -%}
+    </p>
+  </li>
+  {%- endfor %}
+</ul>
