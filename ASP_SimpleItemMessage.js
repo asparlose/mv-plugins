@@ -1,5 +1,5 @@
 /*:ja
- * @plugindesc アイテム入手時にメッセージが割り込む
+ * @plugindesc アイテム入手時にメッセージが割り込む v1.0.0
  * @author asparlose
  * 
  * @param Enabled Switch
