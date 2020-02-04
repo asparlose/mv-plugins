@@ -7,7 +7,8 @@
         <meta name="id" content="{{ page.id }}" />
     
         <link href="{{ page.url | absolute_url }}" rel="canonical" />
-    
+        <link href="{{ '/atom.xml' | absolute_url }}" rel="alternate" type="application/atom+xml" title="Atom"/>
+        
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
@@ -27,6 +28,11 @@
         </script>
     </head>
     <body>
-        {{ content }}
+        <header>
+            <h1><a href="{{ '/' | absolute_url }}">{{ site.title }}</a></h1>
+        </header>
+        <section class="content">
+            {{ content }}
+        </section>
     </body>
 </html>

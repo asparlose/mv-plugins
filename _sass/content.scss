@@ -1,0 +1,42 @@
+section.content {
+  max-width: 980px;
+  width: 100%;
+  margin: 1em auto;
+
+  h1 {
+    &::after {
+      display: block;
+      content: '===='
+    }
+  }
+
+  h2, h3, h4, h5, h6 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  h2::before {
+    display: inline;
+    content: '## ';
+  }
+
+  h3::before {
+    display: inline;
+    content: '### ';
+  }
+
+  h4::before {
+    display: inline;
+    content: '#### ';
+  }
+
+  h5::before {
+    display: inline;
+    content: '##### ';
+  }
+
+  h6::before {
+    display: inline;
+    content: '###### ';
+  }
+}

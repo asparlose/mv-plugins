@@ -12,7 +12,44 @@ code {
   font-family: 'Source Code Pro', monospace;
 }
 
-
 h1 .symbols {
   font-size: 1rem;
+}
+
+body {
+  background-color: $background;
+  color: $foreground;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a {
+    color: white;
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+
+    &:hover {
+      text-decoration: underline;
+      opacity: 0.72;
+    }
+  }
+}
+
+a {
+  color: $primary;
+  transition: opacity 0.2s ease;
+  opacity: 0.72;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  td, th {
+    border: 1px solid #60ad5e;
+    padding: 0.2em 0.5em;
+  }
 }

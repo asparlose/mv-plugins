@@ -17,6 +17,8 @@
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 
+  opacity: 1;
+
   &:hover {
     background: $primary-invert;
     color: $primary;

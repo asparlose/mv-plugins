@@ -1,0 +1,31 @@
+html, body {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  &>header, &>footer {
+    flex: 0 0 auto;
+  }
+  &>section {
+    flex: 1 0 auto;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  line-height: 200%;
+}
+
