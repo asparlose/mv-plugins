@@ -1,10 +1,10 @@
 /*:ja
- * @plugindesc 運がステート付与率に与える影響を調整する v1.0.0
+ * @plugindesc 運がステート付与率に与える影響を調整する v1.0.1
  * @author asparlose
  * 
  * @param Luck Modifier
  * @desc 運の値が与える影響
- * @default 1
+ * @default 0.5
  * @min 0
  * @type number
  */
