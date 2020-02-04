@@ -3,9 +3,13 @@ layout: page
 ---
 
 <ul>
-  {%- for p in site.x %}
+  {% assign pages = site.x | sort: "date" | reverse %}
+  {%- for p in pages %}
   <li>
-    <a href="{{ p.url | absolute_url }}">{{ p.title }}</a>
+    <a href="{{ p.url | absolute_url }}">
+      {{ p.title }}
+      {%- include symbols.html page=p %}
+    </a>
     <p>
       {%- if p.description -%}
         {{ p.description | escape }}
