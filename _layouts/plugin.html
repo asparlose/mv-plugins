@@ -21,6 +21,11 @@ layout: default
     title="GitHub">
   <i class="fab fa-github"></i>
 </a>
+<a class="button button-icon"
+    href="https://github.com/asparlose/mv-plugins/commits/{{ page.branch | default: 'master' }}/{{ page.file }}"
+    title="更新履歴">
+  <i class="far fa-list-alt"></i>
+</a>
 </nav>
 
 {{ content }}
