@@ -1,5 +1,5 @@
 /*:ja
- * @plugindesc アイテムを入手した順に表示する v0.1.0
+ * @plugindesc アイテムを入手した順に表示する v0.1.1
  * @author asparlose
  * 
  * @param Order
@@ -74,6 +74,9 @@ var $gameItemOrder;
 
         get(item) {
             const collection = this.collection(item);
+            if (!item) {
+                return order === 'asc' ? Infinity : -Infinity;
+            }
             if (collection && collection[item.id]) {
                 return collection[item.id];
             }
