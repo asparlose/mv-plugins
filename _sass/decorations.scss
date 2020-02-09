@@ -67,3 +67,27 @@ hr {
   background: #60ad5e;
   border: none;
 }
+
+
+.nav-buttons {
+  border: 1px solid $primary;
+  display: flex;
+
+  .button, button, input[type=button], input[type=submit], input[type=reset] {
+    margin: -1px;
+    border: 1px solid $primary;
+    border-radius: 0;
+    display: block;
+    transition: all 0.2s ease;
+
+    &.primary, &:hover {
+      background: $primary;
+      color: $primary-invert;
+    }
+
+    &.primary:hover, & {
+      background: $primary-invert;
+      color: $primary;
+    }
+  }
+}
