@@ -53,3 +53,17 @@ table {
     padding: 0.2em 0.5em;
   }
 }
+
+pre.highlight {
+  border: 1px solid #60ad5e;
+  padding: 0.5em 1em;
+}
+
+hr {
+  width: 50%;
+  margin: 2em auto;
+  display: block;
+  height: 1px;
+  background: #60ad5e;
+  border: none;
+}
