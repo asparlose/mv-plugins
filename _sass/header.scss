@@ -3,3 +3,14 @@ header {
   padding: 1em 0;
   border-bottom: 1px solid #60ad5e;
 }
+
+footer {
+  text-align: center;
+  margin-top: 1em;
+  padding: 1em 0;
+  border-top: 1px solid #60ad5e;
+
+  > p {
+    margin: 0 1em;
+  }
+}
