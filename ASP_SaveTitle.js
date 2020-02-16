@@ -1,5 +1,5 @@
 /*:ja
- * @plugindesc セーブ画面に表示するタイトルを変更する v0.1.0
+ * @plugindesc セーブ画面に表示するタイトルを変更する v0.1.1
  * @author asparlose
  * 
  * @param Default
@@ -11,11 +11,6 @@
  * @desc セーブデータ タイトルを設定するコマンド名。
  * @default SetSaveTitle
  * @type string
- * 
- * @param OverrideInfoTitle
- * @desc セーブデータの title 値を変更します。
- * @default true
- * @type boolean
  */
 
 var $saveTitle;
@@ -26,7 +21,6 @@ var $saveTitle;
     const params = PluginManager.parameters('ASP_SaveTitle');
     const defaultTitle = String(params.Default || '\\p[0]');
     const setSaveTitleCommand = String(params.SetSaveTitleCommand || 'SetSaveTitle');
-    const overrideInfoTitle = Boolean(params.OverrideInfoTitle);
 
     /**
      * @param {String} text 
@@ -90,11 +84,7 @@ var $saveTitle;
     const makeSavefileInfo = DataManager.makeSavefileInfo;
     DataManager.makeSavefileInfo = function() {
         const info = makeSavefileInfo.call(this);
-        if (overrideInfoTitle) {
-            info.title = processEscape($saveTitle || defaultTitle);
-        } else {
-            info.saveTitle = processEscape($saveTitle || defaultTitle);
-        }
+        info.title = processEscape($saveTitle || defaultTitle) || info.title;
         return info;
     }
 
@@ -103,13 +93,6 @@ var $saveTitle;
     DataManager.extractSaveContents = function(contents) {
         extractSaveContents.call(this, contents);
         $saveTitle = contents.saveTitleTemplate || defaultTitle;
-    };
-
-    Window_SavefileList.prototype.drawGameTitle = function(info, x, y, width) {
-        const title = info.saveTitle || info.title;
-        if (title) {
-            this.drawText(title, x, y, width);
-        }
     };
 
     /**
