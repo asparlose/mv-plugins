@@ -1,6 +1,5 @@
 ---
 title: ASP_HideItemCount
-layout: plugin
 file: ASP_HideItemCount.js
 date: 2020-02-03
 ---

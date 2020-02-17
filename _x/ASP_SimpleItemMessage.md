@@ -1,6 +1,5 @@
 ---
 title: ASP_SimpleItemMessage
-layout: plugin
 file: ASP_SimpleItemMessage.js
 date: 2020-02-03
 ---

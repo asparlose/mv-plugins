@@ -1,6 +1,5 @@
 ---
 title: ASP_EffectRate
-layout: plugin
 file: ASP_EffectRate.js
 date: 2020-02-03
 ---

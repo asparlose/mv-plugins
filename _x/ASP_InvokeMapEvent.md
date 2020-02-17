@@ -1,6 +1,5 @@
 ---
 title: ASP_InvokeMapEvent
-layout: plugin
 file: ASP_InvokeMapEvent.js
 date: 2020-02-10
 ---

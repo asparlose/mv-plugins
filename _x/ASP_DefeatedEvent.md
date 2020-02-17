@@ -1,6 +1,5 @@
 ---
 title: ASP_DefeatedEvent
-layout: plugin
 file: ASP_DefeatedEvent.js
 branch: beta/defeated-event
 date: 2020-02-10

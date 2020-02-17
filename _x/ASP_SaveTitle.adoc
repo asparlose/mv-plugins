@@ -1,6 +1,5 @@
 ---
 title: ASP_SaveTitle
-layout: plugin
 file: ASP_SaveTitle.js
 branch: beta/save-title
 date: 2020-02-17

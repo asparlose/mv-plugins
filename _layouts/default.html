@@ -4,7 +4,11 @@
         <meta charset="utf8" />
         <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta name="id" content="{{ page.id }}" />
+        {% if page.description %}
+        <meta name="description" content="{{ page.description }}" />
+        {% elsif page.auto_description %}
+        <meta name="description" content="{{ page.excerpt | strip_html | strip | escape }}" />
+        {% endif %}
     
         <link href="{{ page.url | absolute_url }}" rel="canonical" />
         <link href="{{ '/atom.xml' | absolute_url }}" rel="alternate" type="application/atom+xml" title="Atom"/>

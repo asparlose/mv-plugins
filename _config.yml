@@ -6,5 +6,14 @@ collections:
   x:
     output: true
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: "x"
+    values:
+      layout: "plugin"
+      auto_description: true
+
 plugins:
   - jekyll-asciidoc

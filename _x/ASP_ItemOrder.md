@@ -1,6 +1,5 @@
 ---
 title: ASP_ItemOrder
-layout: plugin
 file: ASP_ItemOrder.js
 branch: beta/item-order
 date: 2020-02-04
