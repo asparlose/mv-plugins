@@ -5,3 +5,6 @@ baseurl: /mv-plugins
 collections:
   x:
     output: true
+
+plugins:
+  - jekyll-asciidoc
