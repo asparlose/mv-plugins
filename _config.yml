@@ -13,4 +13,3 @@ defaults:
       type: "x"
     values:
       layout: "plugin"
-      auto_description: true

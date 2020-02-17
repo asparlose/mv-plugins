@@ -6,8 +6,6 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         {% if page.description %}
         <meta name="description" content="{{ page.description }}" />
-        {% elsif page.auto_description %}
-        <meta name="description" content="{{ page.excerpt | strip_html | strip | escape }}" />
         {% endif %}
     
         <link href="{{ page.url | absolute_url }}" rel="canonical" />
