@@ -119,3 +119,16 @@ hr {
     }
   }
 }
+
+code {
+  text-shadow: 0.5px 0.5px 1px $primary;
+  text-decoration: underline solid $primary;
+  user-select: all;
+
+  pre & {
+    color: $foreground;
+    text-decoration: none;
+    text-shadow: none;
+    user-select: auto;
+  }
+}

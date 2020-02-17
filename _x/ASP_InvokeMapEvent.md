@@ -14,7 +14,7 @@ date: 2020-02-10
 
 ## プラグインコマンド
 
-### InvokeMapEvent
+### `InvokeMapEvent`
 
 マップイベントを呼び出します。
 

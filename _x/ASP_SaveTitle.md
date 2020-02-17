@@ -25,7 +25,7 @@ tags: [ beta ]
 
 ## プラグインコマンド
 
-### SetSaveTitle
+### `SetSaveTitle`
 
 セーブタイトル テンプレートを設定します。
 
