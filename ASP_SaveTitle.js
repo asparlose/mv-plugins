@@ -1,5 +1,5 @@
 /*:ja
- * @plugindesc セーブ画面に表示するタイトルを変更する v0.1.2
+ * @plugindesc セーブ画面に表示するタイトルを変更する v0.1.3
  * @author asparlose
  * 
  * @param Default
@@ -49,16 +49,30 @@ var $saveTitle;
 
             switch (a.toLowerCase()) {
                 case 'p':
-                    result += $gameActors.actor($gameParty._actors[Number(i2) - 1]).name();
+                    {
+                        const actor = $gameActors.actor($gameParty._actors[Number(i2) - 1]);
+                        if (!actor) {
+                            console.error(`Invalid party index: ${i2}`);
+                        } else {
+                            result += actor.name();
+                        }
+                    }
                     break;
                 case 'n':
-                    result += $gameActors.actor(Number(i2)).name();
+                    {
+                        const actor = $gameActors.actor(Number(i2));
+                        if (!actor) {
+                            console.error(`Invalid actor index: ${i2}`);
+                        } else {
+                            result += actor.name();
+                        }
+                    }
                     break;
                 case 'v':
                     result += $gameVariables.value(Number(i2));
                     break;
                 default:
-                    result += a + '[' + i2 + ']';
+                    result += '\\' + a + '[' + i2 + ']';
                     break;
             }           
         }
