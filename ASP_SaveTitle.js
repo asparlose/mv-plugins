@@ -1,5 +1,5 @@
 /*:ja
- * @plugindesc セーブ画面に表示するタイトルを変更する v0.1.1
+ * @plugindesc セーブ画面に表示するタイトルを変更する v0.1.2
  * @author asparlose
  * 
  * @param Default
@@ -19,7 +19,7 @@ var $saveTitle;
     'use strict';
 
     const params = PluginManager.parameters('ASP_SaveTitle');
-    const defaultTitle = String(params.Default || '\\p[0]');
+    const defaultTitle = String(params.Default || '\\p[1]');
     const setSaveTitleCommand = String(params.SetSaveTitleCommand || 'SetSaveTitle');
 
     /**
@@ -107,7 +107,7 @@ var $saveTitle;
     Game_Interpreter.prototype.pluginCommand = function(command, args) {
         pluginCommand.call(this, command, args);
         if (command === setSaveTitleCommand) {
-            this.setSaveTitle(String(JSON.parse(args[0])));
+            this.setSaveTitle(args.join(' '));
         }
     };
 })();
