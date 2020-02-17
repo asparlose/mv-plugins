@@ -92,94 +92,18 @@ hr {
   }
 }
 
-.admonitionblock {
-  margin: 1em 0;
-
-  table {
-    tr {
-      display: flex;
-      align-items: center;
-
-      td {
-        flex: 1 1 auto;
-        border: none;
-        padding: 0;
-        margin: 0;
-        
-        &+td {
-          margin-right: 1em;
-        }
-        
-        &.icon {
-          flex: 0 0 auto;
-          font-family: "Font Awesome 5 Free";
-          font-weight: 900;
-          text-align: center;
-          margin-right: 0.5em;
-          font-size: 2em;
-          width: 1.5em;
-          .title {
-            display: none;
-          }
-        }
-
-        &.content {
-          .paragraph:first-child p {
-            margin-top: 0;
-          }
-
-          .paragraph:last-child p {
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
-  }
-
-  &.note .icon::after {
-    content: '\f05a';
-    -webkit-text-stroke: 1px #4040ff;
-    text-stroke: 1px #4040ff;
-  }
-
-  &.tip .icon::after {
-    content: '\f0eb';
-    -webkit-text-stroke: 0.5px #4040ff;
-    text-stroke: 0.5px #4040ff;
-  }
-
-  &.important .icon::after {
-    content: '\f06a';
-    -webkit-text-stroke: 0.5px #ff8040;
-    text-stroke: 0.5px #ff8040;
-  }
-
-  &.caution .icon::after{
-    content: '\f071';
-    -webkit-text-stroke: 0.5px #ff8040;
-    text-stroke: 0.5px #ff8040;
-  }
-
-  &.warning .icon::after{
-    content: '\f071';
-    -webkit-text-stroke: 0.5px #ff4040;
-    text-stroke: 0.5px #ff4040;
-  }
-}
-
-.tableblock colgroup col {
-  width: auto !important;
-}
-
-.openblock.image-group .content {
+.image-group {
   display: flex;
   flex-wrap: wrap;
-  
-  .imageblock {
-    width: 50%;
+  margin: 0 -0.5em;
+
+  figure {
     max-width: 100%;
-    min-width: 256px;
-    flex: 1 1 auto;
+    min-width: 320px;
+    flex: 1 1 50%;
+    margin: 0;
+    padding: 0 0.5em;
+    box-sizing: border-box;
 
     height: auto;
 
@@ -189,7 +113,7 @@ hr {
       height: auto;
     }
 
-    .title {
+    figcaption {
       line-height: 200%;
       margin-bottom: 1em;
     }
